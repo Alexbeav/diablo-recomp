@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Diablo",
+    "id": "SLES-01156",
+    "boot_exe": "SLES_011.56"
+  },
+  "marketing": {
+    "description": "Diablo recompiled for modern systems using psxrecomp.",
+    "publisher": "Electronic Arts / Blizzard Entertainment",
+    "year": "1998",
+    "region": "Europe",
+    "players": 2
+  },
+  "rom_identity": {
+    "cue_name": "Diablo (Europe) (En,Fr,De,Sv).cue",
+    "bin_name": "Diablo (Europe) (En,Fr,De,Sv).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 653296224,
+      "md5": "3e8d3509f67344b862f33520a01cbc33",
+      "sha1": "3dcfffb32c962d7ee2b00ea532b044aaeaaeb8ad",
+      "sha256": "a8e56ca1fa612b6f164abf4452492f2e0f1598ec64a43610f23a499a10476fa0",
+      "crc32": "0d207413"
+    },
+    "disc_fp": "b2828aba173274076565ea32fc91b12f27b88a1c55bd31b7f528393117cb53a4"
+  },
+  "exe": {
+    "load_address": "0x801C0000",
+    "entry_pc": "0x801C8C04",
+    "text_size": "0x0000C000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 126,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity).",
+    "This verified Redump release is a complete one-track disc."
+  ]
+}

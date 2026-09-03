@@ -1,0 +1,30 @@
+{
+  "cue_name": "Diablo (Europe) (En,Fr,De,Sv).cue",
+  "bin_name": "Diablo (Europe) (En,Fr,De,Sv).bin",
+  "track_count": 1,
+  "data_track_size": 653296224,
+  "data_track_md5": "3e8d3509f67344b862f33520a01cbc33",
+  "data_track_sha1": "3dcfffb32c962d7ee2b00ea532b044aaeaaeb8ad",
+  "data_track_sha256": "a8e56ca1fa612b6f164abf4452492f2e0f1598ec64a43610f23a499a10476fa0",
+  "data_track_crc32": "0d207413",
+  "boot_exe": "SLES_011.56",
+  "serial": "SLES-01156",
+  "serial_exe": "SLES_011.56",
+  "volume_id": "",
+  "display_name": "Diablo",
+  "load_address": "0x801C0000",
+  "entry_pc": "0x801C8C04",
+  "text_size": "0x0000C000",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "b2828aba173274076565ea32fc91b12f27b88a1c55bd31b7f528393117cb53a4",
+  "boot_exe_sha256": "cabdfba80a4ae5a2245c28ba080c63fc90f79182b58e0ebf657b4b5345e493d4",
+  "seed_count": 126,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity).",
+    "This verified Redump release is a complete one-track disc."
+  ]
+}

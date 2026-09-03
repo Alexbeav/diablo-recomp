@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Diablo"
+id = "SLES-01156"
+players = 2
+exe = "disc/SLES_011.56"
+disc = "disc/Diablo (Europe) (En,Fr,De,Sv).cue"
+load_address = "0x801C0000"
+entry_pc = "0x801C8C04"
+text_size = "0x0000C000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Diablo (Europe) (En,Fr,De,Sv).bin"
+cue_name = "Diablo (Europe) (En,Fr,De,Sv).cue"
+boot_exe = "SLES_011.56"
+known_sizes = [653296224]
+known_md5 = [
+  "3e8d3509f67344b862f33520a01cbc33",
+]
+known_sha1 = [
+  "3dcfffb32c962d7ee2b00ea532b044aaeaaeb8ad",
+]
+known_crc32 = [
+  "0d207413",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+strict = true
+
+[runtime]
+window_title = "Diablo Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "b2828aba173274076565ea32fc91b12f27b88a1c55bd31b7f528393117cb53a4"
